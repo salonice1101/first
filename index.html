@@ -1,0 +1,51 @@
+<html>
+<script>
+function validate()
+{
+if (document.getElementById("t1").value=="")
+{
+alert("Please provide your name!");
+return false;
+         }
+         
+         if( document.getElementById("t2").value == "" )
+         {
+            alert( "Please provide your Email!" );
+            return false;
+         }
+         
+         if( document.getElementById("t3").value == "")
+         {
+            alert( "Please provide a zip code." );
+            return false;
+         }
+         
+         if( document.getElementById("t4").value == "-1" )
+         {
+            alert( "Please provide your country!" );
+            return false;
+         }
+         return( true );
+      }
+
+      </script>
+      
+   </head>
+   
+   <body>
+      <form name="myForm" onsubmit="return(validate());">
+        Name: <input type="text" name="Name" id="t1"> <br>
+        Email:<input type="text" name="EMail" id="t2"> <br>
+        Pin Code:<input type="text" name="Zip" id="t3"> <br>
+        Country:<select name="Country" id="t4">
+           <option value="-1" selected>[choose yours]</option>
+           <option value="1">USA</option>
+           <option value="2">UK</option>
+           <option value="3">INDIA</option>
+          </select> <br>
+          <input type="submit" value="Submit" />
+            
+      </form>
+      
+   </body>
+</html> 
